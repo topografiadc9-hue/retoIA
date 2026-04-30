@@ -3,483 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reto de IA 21 Días - Transforma tu Negocio con Inteligencia Artificial</title>
-    
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <title>Reto IA 21 Días + Bonos Exclusivos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/all.min.css">
     <style>
-        :root {
-            --primary-violet: #9b59b6;
-            --primary-pink: #e91e63;
-            --primary-orange: #ff5722;
-            --dark-bg: #0a0a0a;
-            --dark-secondary: #1a1a1a;
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--dark-bg);
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             color: #ffffff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Animated Background */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 80%, var(--primary-violet) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, var(--primary-pink) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, var(--primary-orange) 0%, transparent 50%);
-            opacity: 0.1;
-            z-index: -1;
-        }
-
-        /* Glassmorphism Cards */
-        .glass-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .glass-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--primary-violet), var(--primary-pink), var(--primary-orange));
-            border-radius: 20px 20px 0 0;
-        }
-
-        .glass-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary-pink);
-            box-shadow: 0 20px 40px rgba(233, 30, 99, 0.2);
-        }
-
-        /* Hero Section */
-        .hero-section {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            padding: 100px 0;
         }
-
-        .hero-title {
-            font-size: 4rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary-violet), var(--primary-pink));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            color: #cccccc;
-            margin-bottom: 2rem;
-            font-weight: 300;
-        }
-
-        /* Video Section */
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 0 50px rgba(255, 87, 34, 0.3);
-        }
-
-        .video-container::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, var(--primary-orange), var(--primary-pink), var(--primary-violet));
-            border-radius: 22px;
-            z-index: -1;
-            animation: neonGlow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes neonGlow {
-            from {
-                box-shadow: 0 0 20px rgba(255, 87, 34, 0.5);
-            }
-            to {
-                box-shadow: 0 0 40px rgba(255, 87, 34, 0.8), 0 0 60px rgba(233, 30, 99, 0.4);
-            }
-        }
-
-        .video-placeholder {
-            aspect-ratio: 16/9;
-            background: var(--dark-secondary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: #888;
-        }
-
-        /* Bonus Cards */
-        .bonus-value {
-            background: linear-gradient(135deg, var(--primary-orange), var(--primary-pink));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .bonus-icon {
-            font-size: 3rem;
-            color: var(--primary-violet);
-            margin-bottom: 1rem;
-        }
-
-        /* CTA Button */
-        .cta-button {
-            background: linear-gradient(135deg, var(--primary-orange), var(--primary-pink));
-            border: none;
-            padding: 20px 40px;
-            font-size: 1.5rem;
-            font-weight: 700;
-            border-radius: 50px;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(255, 87, 34, 0.3);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 87, 34, 0.5);
-            color: white;
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        /* Section Titles */
-        .section-title {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--primary-violet);
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        /* Instructions */
-        .instructions {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 15px;
             padding: 2rem;
-            text-align: center;
-            margin-top: 2rem;
+            transition: transform 0.3s ease;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            height: 100%;
         }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .cta-button {
-                font-size: 1.2rem;
-                padding: 15px 30px;
-            }
+        .glass-card:hover { transform: translateY(-10px); }
+        h1, .text-violet { color: #9b59b6; text-shadow: 0 0 10px rgba(155, 89, 182, 0.5); }
+        .text-pink { color: #e91e63; font-weight: bold; }
+        .btn-hotmart {
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
         }
-
-        /* Placeholder Styles */
-        .placeholder {
-            background: rgba(255, 193, 7, 0.2);
-            border: 2px dashed #ffc107;
-            padding: 10px;
-            border-radius: 8px;
-            color: #ffc107;
-            font-weight: 600;
-            text-align: center;
-            margin: 10px 0;
+        .btn-hotmart:hover { background-color: #e64a19; color: white; transform: scale(1.05); }
+        .btn-whatsapp {
+            background-color: transparent;
+            border: 2px solid #e91e63;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .btn-whatsapp:hover { background-color: #e91e63; color: white; }
+        .video-container {
+            border: 3px solid #9b59b6;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(155, 89, 182, 0.3);
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-10">
-                    <h1 class="hero-title">
-                        <i class="fas fa-robot me-3"></i>
-                        RETO DE IA 21 DÍAS
-                    </h1>
-                    <p class="hero-subtitle">
-                        Transforma tu negocio con Inteligencia Artificial y genera ingresos automáticos en solo 3 semanas
-                    </p>
-                    <div class="mt-4">
-                        <i class="fas fa-star text-warning me-2"></i>
-                        <span class="text-warning fw-bold">Resultados garantizados o te devolvemos tu dinero</span>
-                        <i class="fas fa-star text-warning ms-2"></i>
-                    </div>
-                </div>
+
+<div class="container py-5">
+    <!-- HERO SECTION -->
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold mb-3">RETO IA 21 DÍAS</h1>
+        <p class="lead">Domina la Inteligencia Artificial y construye tu negocio digital en tiempo récord.</p>
+    </div>
+
+    <!-- VIDEO SECTION -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8 video-container p-0">
+            <div class="ratio ratio-16x9">
+                <!-- REEMPLAZA ESTE LINK CON TU VIDEO DE YOUTUBE -->
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="YouTube video" allowfullscreen></iframe>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Video Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="video-container">
-                        <div class="video-placeholder">
-                            <div>
-                                <i class="fas fa-play-circle fa-4x mb-3 text-primary"></i>
-                                <p class="placeholder">
-                                    🎥 INSERTA AQUÍ TU VIDEO DE YOUTUBE/VIMEO<br>
-                                    Reemplaza este div con tu iframe de video
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- BONOS SECTION -->
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">🎁 TUS BONOS EXCLUSIVOS <span class="text-pink">(VALOR $334 USD)</span></h2>
+        <p>Solo si compras a través de esta página hoy mismo.</p>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <!-- Bono 1 -->
+        <div class="col-md-4">
+            <div class="glass-card text-center">
+                <i class="fas fa-cloud text-violet fa-3x mb-3"></i>
+                <h4 class="fw-bold">Media CloudPro 2.0</h4>
+                <p>Acceso premium al software de gestión de activos con IA.</p>
+                <p class="text-pink">VALOR: $39.90 USD</p>
             </div>
         </div>
-    </section>
+        <!-- Bono 2 -->
+        <div class="col-md-4">
+            <div class="glass-card text-center">
+                <i class="fas fa-rocket text-violet fa-3x mb-3"></i>
+                <h4 class="fw-bold">Portal & 5 Apps</h4>
+                <p>Crea tu infraestructura en 14 días. Video-clases y Grupo VIP.</p>
+                <p class="text-pink">VALOR: $197 USD</p>
+            </div>
+        </div>
+        <!-- Bono 3 -->
+        <div class="col-md-4">
+            <div class="glass-card text-center">
+                <i class="fas fa-brain text-violet fa-3x mb-3"></i>
+                <h4 class="fw-bold">AI Profit Blueprint</h4>
+                <p>500+ Prompts expertos para automatizar tus ventas.</p>
+                <p class="text-pink">VALOR: $97 USD</p>
+            </div>
+        </div>
+    </div>
 
-    <!-- Bonos Section -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-gift me-3"></i>
-                BONOS IRRESISTIBLES
-            </h2>
-            <p class="text-center text-muted mb-5 fs-5">
-                Obtén estos increíbles bonos GRATIS al unirte al reto hoy
-            </p>
+    <!-- CALL TO ACTION -->
+    <div class="text-center glass-card py-5">
+        <h3 class="mb-4">¿Listo para transformar tu futuro con IA?</h3>
+        
+        <!-- PONE TU LINK DE HOTMART AQUÍ ABAJO -->
+        <a href="https://hotm.io/zy0UhGii" class="btn btn-hotmart mb-3 d-inline-block text-decoration-none">
+            ¡QUIERO EL RETO + MIS BONOS GRATIS!
+        </a>
+
+        <div class="mt-4">
+            <p class="mb-2">⚠️ IMPORTANTE: Para reclamar tus bonos:</p>
+            <p class="small">Tras la compra, envíame tu comprobante por WhatsApp para activarlos manualmente.</p>
             
-            <div class="row g-4">
-                <!-- Bono 1 -->
-                <div class="col-lg-4">
-                    <div class="glass-card h-100 text-center">
-                        <i class="fas fa-cloud-upload-alt bonus-icon"></i>
-                        <h4 class="fw-bold mb-3">Media CloudPro 2.0</h4>
-                        <div class="bonus-value mb-3">Valor: $39.90</div>
-                        <p class="text-muted">
-                            Sistema completo de gestión de activos digitales potenciado con IA. 
-                            Organiza, optimiza y monetiza tu contenido automáticamente.
-                        </p>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-check text-success me-2"></i>Gestión automática de archivos</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Optimización con IA</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Integración en la nube</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Bono 2 -->
-                <div class="col-lg-4">
-                    <div class="glass-card h-100 text-center">
-                        <i class="fas fa-rocket bonus-icon"></i>
-                        <h4 class="fw-bold mb-3">Sistema 'Portal Express'</h4>
-                        <div class="bonus-value mb-3">5 Apps en 14 días</div>
-                        <p class="text-muted">
-                            Metodología completa para crear 5 aplicaciones rentables en solo 2 semanas. 
-                            Incluye clases exclusivas y acceso al grupo VIP.
-                        </p>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-check text-success me-2"></i>Clases paso a paso</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Herramientas premium</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Grupo VIP de WhatsApp</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Bono 3 -->
-                <div class="col-lg-4">
-                    <div class="glass-card h-100 text-center">
-                        <i class="fas fa-brain bonus-icon"></i>
-                        <h4 class="fw-bold mb-3">The AI Profit Blueprint</h4>
-                        <div class="bonus-value mb-3">500+ Prompts Expertos</div>
-                        <p class="text-muted">
-                            Colección exclusiva de más de 500 prompts profesionales para IA. 
-                            Ahorra meses de prueba y error con fórmulas probadas.
-                        </p>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-check text-success me-2"></i>Prompts categorizados</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Casos de uso reales</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Actualizaciones mensuales</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <!-- PONE TU LINK DE WHATSAPP AQUÍ ABAJO -->
+            <a href="https://wa.link/vj2rrh" class="btn btn-whatsapp text-decoration-none">
+                <i class="fab fa-whatsapp me-2"></i> ENVIAR COMPROBANTE POR WHATSAPP
+            </a>
         </div>
-    </section>
+    </div>
+</div>
 
-    <!-- Call to Action Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="section-title mb-4">
-                        ¡No Dejes Pasar Esta Oportunidad!
-                    </h2>
-                    <p class="fs-5 text-muted mb-4">
-                        Únete ahora y recibe todos los bonos GRATIS por tiempo limitado
-                    </p>
-                    
-                    <div class="placeholder mb-4">
-                        🔗 REEMPLAZA "https://hotm.io/zy0UhGii" CON TU ENLACE DE AFILIADO DE HOTMART
-                    </div>
-                    
-                    <a href="#" class="btn cta-button">
-                        <i class="fas fa-rocket me-2"></i>
-                        ¡QUIERO EL RETO + MIS BONOS GRATIS!
-                    </a>
-                    
-                    <div class="instructions mt-4">
-                        <h5 class="fw-bold mb-3">
-                            <i class="fas fa-info-circle me-2 text-info"></i>
-                            Instrucciones de Entrega
-                        </h5>
-                        <p class="mb-3">
-                            Tras realizar tu compra, haz clic en el botón de abajo para enviarme tu comprobante por WhatsApp y activaremos tus bonos de inmediato.
-                        </p>
-                        
-                        <div class="placeholder mb-3">
-                            📱 REEMPLAZA "https://wa.link/wu0h8k" CON TU ENLACE DE WHATSAPP
-                        </div>
-                        
-                        <a href="#" class="btn btn-success btn-lg">
-                            <i class="fab fa-whatsapp me-2"></i>
-                            Enviar Comprobante por WhatsApp
-                        </a>
-                        
-                        <div class="mt-3">
-                            <small class="text-muted">
-                                <i class="fas fa-clock me-1"></i>
-                                Activación inmediata • Soporte 24/7 • Garantía de satisfacción
-                            </small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer class="text-center py-4 text-secondary">
+    <p>© 2026 Portal HotApp - Todos los derechos reservados.</p>
+</footer>
 
-    <!-- Footer -->
-    <footer class="py-4 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="text-muted mb-0">
-                        © 2024 Reto de IA 21 Días. Todos los derechos reservados.
-                    </p>
-                    <p class="text-muted small mt-2">
-                        <i class="fas fa-shield-alt me-1"></i>
-                        Compra 100% segura • Garantía de devolución • Soporte premium
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom JS for smooth scrolling and animations -->
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all glass cards
-        document.querySelectorAll('.glass-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
