@@ -46,8 +46,26 @@
             box-shadow: 0 0 35px rgba(155, 89, 182, 0.3);
             background-color: rgba(0,0,0,0.5);
         }
+
+        .bonus-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #ff3385;
+            border-radius: 10px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
         
-        /* Botón CTA Principal rediseñado para mayor conversión */
+        .bonus-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00e6e6;
+            margin-right: 1.5rem;
+            opacity: 0.8;
+        }
+        
+        /* Botón CTA Principal */
         .btn-cta-main {
             background: linear-gradient(135deg, #ff0066 0%, #cc0052 100%);
             border: none;
@@ -92,6 +110,7 @@
 <body>
 
 <div class="container py-5">
+    <!-- HERO SECTION -->
     <div class="text-center mb-5 mt-3">
         <h1 class="display-3 text-neon-violet mb-3 fw-bold">RETO IA 21 DÍAS</h1>
         <p class="lead fs-3 fw-light">Domina la Inteligencia Artificial y construye tu negocio digital en tiempo récord.</p>
@@ -110,6 +129,7 @@
         <p class="mt-3 text-muted small"><i class="fas fa-shield-alt"></i> Pago 100% seguro vía Hotmart • Acceso inmediato</p>
     </div>
 
+    <!-- LO QUE INCLUYE (IMAGEN 1) -->
     <div class="mb-5 pt-4">
         <div class="text-center mb-5">
             <span class="section-subtitle">// LO QUE INCLUYE</span>
@@ -162,31 +182,64 @@
         </div>
     </div>
 
-    <div class="glass-card mb-5">
-        <div class="text-center mb-5">
-            <span class="section-subtitle">// TU INSTRUCTOR</span>
-            <h2 class="fw-bold">Aprende con quien <span class="text-neon-cyan">ya lo hizo</span></h2>
-        </div>
-        
-        <div class="row align-items-center mb-5 pb-5 border-bottom border-secondary">
-            <div class="col-md-4 text-center mb-4 mb-md-0">
-                <div class="rounded-circle d-inline-flex align-items-center justify-content-center border border-info border-3" style="width: 150px; height: 150px; background: #0f0c29; box-shadow: 0 0 20px rgba(0, 230, 230, 0.4);">
-                    <i class="fas fa-user-tie fa-4x text-neon-cyan"></i>
-                </div>
-                <h4 class="mt-3 fw-bold">Iván Mercado L.</h4>
-                <p class="text-neon-cyan small mb-0">// Instructor - Consultor IA</p>
-            </div>
-            <div class="col-md-8">
-                <p class="fs-6 opacity-75">Especialista en productividad con IA y entrenador de profesionales latinoamericanos que quieren usar la tecnología a su favor. Ha guiado a cientos de personas a implementar herramientas IA en su trabajo diario, sin necesidad de conocimientos técnicos previos. Su método: ejemplos reales, lenguaje claro, y acompañamiento hasta que funciona.</p>
-                <div class="d-flex flex-wrap gap-2 mt-3">
-                    <span class="badge rounded-pill bg-dark border border-info">+1250 alumnos formados</span>
-                    <span class="badge rounded-pill bg-dark border border-info">+8 países</span>
-                    <span class="badge rounded-pill bg-dark border border-info">PhD - Consultor IA+MKT</span>
-                </div>
-            </div>
+    <!-- BONOS DEL CURSO (IMAGEN 2 - ARRIBA) -->
+    <div class="glass-card mb-5 border-top border-pink border-3">
+        <div class="text-center mb-4">
+            <span class="section-subtitle">// BONOS DESBLOQUEADOS</span>
+            <h2 class="fw-bold mb-3">Extras que potencian <span class="text-neon-pink">tus resultados</span></h2>
+            <p class="opacity-75 fs-5">Todo esto incluido GRATIS con tu inscripción de $27 USD</p>
         </div>
 
-        <div class="text-center mb-4">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="bonus-item">
+                    <div class="bonus-number">01</div>
+                    <div class="flex-grow-1">
+                        <h5 class="fw-bold mb-1">100+ Prompts Listos para Usar</h5>
+                        <p class="mb-0 small opacity-75">Biblioteca categorizada por uso: trabajo, estudio, creación de contenido y productividad. Copy/paste inmediato.</p>
+                    </div>
+                    <div class="text-neon-pink fw-bold ms-3">$47</div>
+                </div>
+
+                <div class="bonus-item">
+                    <div class="bonus-number">02</div>
+                    <div class="flex-grow-1">
+                        <h5 class="fw-bold mb-1">Guías PDF Semanales</h5>
+                        <p class="mb-0 small opacity-75">Resumen descargable de cada semana con conceptos clave, herramientas y pasos de acción inmediata.</p>
+                    </div>
+                    <div class="text-neon-pink fw-bold ms-3">$97</div>
+                </div>
+
+                <div class="bonus-item">
+                    <div class="bonus-number">03</div>
+                    <div class="flex-grow-1">
+                        <h5 class="fw-bold mb-1">Plantillas de Workflows</h5>
+                        <p class="mb-0 small opacity-75">Templates pre-configurados para automatizar emails, reportes y gestión de información.</p>
+                    </div>
+                    <div class="text-neon-pink fw-bold ms-3">$67</div>
+                </div>
+
+                <div class="bonus-item">
+                    <div class="bonus-number">04</div>
+                    <div class="flex-grow-1">
+                        <h5 class="fw-bold mb-1">Certificado Digital Oficial</h5>
+                        <p class="mb-0 small opacity-75">Certificado con sello GEO, tu nombre y fecha. Descargable en PDF de alta resolución. Demostrable en LinkedIn.</p>
+                    </div>
+                    <div class="ms-3 badge bg-danger p-2">VALOR INCALCULABLE</div>
+                </div>
+
+                <div class="text-center mt-4 p-4 rounded" style="background: rgba(0, 230, 230, 0.05); border: 1px solid rgba(0, 230, 230, 0.2);">
+                    <p class="text-uppercase tracking-wide small mb-1 opacity-75">Valor Total de tus Bonos</p>
+                    <h2 class="text-neon-cyan display-5 fw-bold mb-2">$210 <span class="fs-4">USD</span></h2>
+                    <p class="mb-0"><i class="fas fa-check-square text-success me-2"></i>Incluidos GRATIS con tu inscripción de $27</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TESTIMONIOS (IMAGEN 2 - ABAJO) -->
+    <div class="glass-card mb-5">
+        <div class="text-center mb-5">
             <span class="section-subtitle">// LO QUE DICEN LOS PARTICIPANTES</span>
             <h2 class="fw-bold mb-4">Resultados de personas <span class="text-neon-cyan">reales</span></h2>
         </div>
@@ -221,4 +274,111 @@
             <div class="col-md-4">
                 <div class="feature-card">
                     <div class="d-flex align-items-center mb-3">
-                        <div class="rounded-circle bg-purple
+                        <div class="rounded-circle bg-purple text-white d-flex align-items-center justify-content-center fw-bold me-3" style="width: 40px; height: 40px; background-color: #6f42c1;">VT</div>
+                        <div>
+                            <h6 class="mb-0 fw-bold">Valeria T.</h6>
+                            <small class="text-neon-cyan" style="font-size: 0.7rem;">Emprendedora - Asunción, PY</small>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="small fst-italic opacity-75">"Las sesiones en vivo del sábado son oro puro. Ver cómo Iván resuelve problemas reales en pantalla te cambia completamente la forma de trabajar."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TUS BONOS PREMIUM EXCLUSIVOS (AFILIADO) -->
+    <div class="text-center mb-5 mt-5">
+        <span class="section-subtitle">// SI COMPRAS CONMIGO</span>
+        <h2 class="fw-bold fs-1">🎁 MIS BONOS PREMIUM <span class="text-neon-pink">EXCLUSIVOS</span></h2>
+        <p class="fs-5 opacity-75">Solo si te inscribes a través de esta página hoy mismo.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center mb-5">
+        <div class="col-md-5">
+            <div class="glass-card text-center border-top border-info border-3">
+                <i class="fas fa-cloud text-neon-violet fa-4x mb-4"></i>
+                <h4 class="fw-bold fs-3">Media CloudPro 2.0</h4>
+                <p class="opacity-75">Acceso premium al software de gestión de activos impulsado por IA.</p>
+                <div class="mt-4 p-2 rounded" style="background: rgba(255,51,133,0.1);">
+                    <span class="text-neon-pink fw-bold">Valor: $39.90 USD</span> <br> <span class="text-success fw-bold small">HOY GRATIS</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="glass-card text-center border-top border-info border-3" style="transform: scale(1.03); box-shadow: 0 15px 40px 0 rgba(0, 230, 230, 0.2);">
+                <div class="badge bg-danger mb-3 px-3 py-2 position-absolute top-0 start-50 translate-middle">ESTRELLA</div>
+                <i class="fas fa-rocket text-neon-cyan fa-4x mb-4 mt-3"></i>
+                <h4 class="fw-bold fs-3">Portal & 5 Apps</h4>
+                <p class="opacity-75">Crea tu infraestructura digital en 14 días con video-clases y Grupo VIP.</p>
+                <div class="mt-4 p-2 rounded" style="background: rgba(255,51,133,0.1);">
+                    <span class="text-neon-pink fw-bold">Valor: $197 USD</span> <br> <span class="text-success fw-bold small">HOY GRATIS</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN DE GARANTÍA (IMAGEN 3 - ARRIBA) -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-10">
+            <div class="glass-card text-center py-4" style="background: rgba(255, 204, 0, 0.05); border: 1px solid rgba(255, 204, 0, 0.2);">
+                <i class="fas fa-certificate guarantee-badge"></i>
+                <span class="section-subtitle text-warning">// TU INVERSIÓN ESTÁ PROTEGIDA</span>
+                <h2 class="display-6 fw-bold mb-3">7 días para probar. <br><span class="text-warning">Sin riesgo. Sin preguntas.</span></h2>
+                <p class="opacity-75 fs-5 mb-4">Si no estás satisfecho por cualquier motivo, recuperas tu dinero completo.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <span class="badge bg-dark border border-warning p-2"><i class="fas fa-check text-success me-2"></i>Reembolso completo</span>
+                    <span class="badge bg-dark border border-warning p-2"><i class="fas fa-ban text-danger me-2"></i>Sin justificaciones</span>
+                    <span class="badge bg-dark border border-warning p-2"><i class="fas fa-bolt text-warning me-2"></i>Procesado en 24-48 hrs</span>
+                    <span class="badge bg-dark border border-warning p-2"><i class="fas fa-file-alt text-light me-2"></i>Sin formularios ocultos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CALL TO ACTION FINAL (IMAGEN 3 - ABAJO) -->
+    <div class="text-center glass-card py-5 border-top border-danger border-4" style="box-shadow: 0 -10px 40px rgba(255,0,102,0.15);">
+        <span class="section-subtitle text-warning">// ES HORA DE DECIDIR</span>
+        <h2 class="display-4 fw-bold mb-4">21 días para cambiar <span class="text-neon-cyan">cómo trabajas</span> para siempre</h2>
+        <p class="fs-5 opacity-75 mb-4">Únete a +850 profesionales que ya usan IA como su herramienta más valiosa. <br>Sin tecnicismos. Sin experiencia previa. Desde el día 1.</p>
+        
+        <div class="my-4">
+            <p class="strike-price mb-0">Valor normal: $297 USD</p>
+            <h1 class="display-1 text-neon-pink fw-bold my-2">$27 USD</h1>
+            <p class="opacity-75 fw-bold">Pago único • Acceso inmediato • Sin suscripciones</p>
+        </div>
+
+        <a href="https://pay.hotmart.com/W104507033Y?checkoutMode=10&bid=1777914418186" class="btn-cta-main my-3">
+            <i class="fas fa-lock"></i> QUIERO MI ACCESO AHORA
+        </a>
+        
+        <div class="mt-3 text-muted small d-flex justify-content-center gap-4 flex-wrap">
+            <span><i class="fas fa-lock text-success"></i> Pago 100% seguro</span>
+            <span><i class="fas fa-bolt text-warning"></i> Acceso inmediato</span>
+            <span><i class="fas fa-shield-alt text-info"></i> Garantía 7 días</span>
+            <span><i class="fas fa-tools text-secondary"></i> Herramientas gratuitas</span>
+        </div>
+
+        <div class="mt-4 p-3 rounded mx-auto" style="max-width: 600px; background: rgba(255, 51, 133, 0.1); border: 1px solid rgba(255, 51, 133, 0.3);">
+            <p class="mb-0 small"><i class="fas fa-hourglass-half text-neon-pink me-2"></i><span class="text-neon-pink fw-bold">Precio de lanzamiento.</span> El precio subirá a $97 USD una vez finalice la campaña. ASEGURA TU ACCESO ahora al precio más bajo del mercado.</p>
+        </div>
+
+        <!-- Instrucciones para reclamar tus bonos como afiliado -->
+        <div class="mt-5 pt-4 border-top border-secondary">
+            <p class="fs-5 mb-2 fw-bold text-warning">⚠️ ATENCIÓN: Para reclamar Mis Bonos Exclusivos (CloudPro & Portal):</p>
+            <p class="opacity-75">Tras la compra en Hotmart, haz clic abajo para enviarme tu comprobante por WhatsApp.</p>
+            
+            <a href="https://wa.link/vj2rrh" class="btn-whatsapp mt-2">
+                <i class="fab fa-whatsapp fa-lg me-2"></i> ENVIAR COMPROBANTE POR WHATSAPP
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center py-4 mt-5 text-secondary" style="background-color: #0a0a14;">
+    <p class="mb-0">© 2026 Portal HotApp - Todos los derechos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
