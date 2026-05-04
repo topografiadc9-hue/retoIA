@@ -14,121 +14,211 @@
             min-height: 100vh;
         }
         .text-neon-violet { color: #cc66ff; text-shadow: 0 0 15px rgba(204, 102, 255, 0.7); font-weight: bold; }
-        .text-neon-pink { color: #ff66b2; font-weight: bold; }
+        .text-neon-pink { color: #ff3385; text-shadow: 0 0 15px rgba(255, 51, 133, 0.5); font-weight: bold; }
+        .text-neon-cyan { color: #00e6e6; text-shadow: 0 0 10px rgba(0, 230, 230, 0.5); }
+        .section-subtitle { font-size: 0.9rem; letter-spacing: 2px; color: #00e6e6; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; display: block; }
+        
         .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 20px;
             padding: 2rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.5);
             height: 100%;
         }
-        .glass-card:hover { transform: translateY(-10px); box-shadow: 0 15px 50px 0 rgba(155, 89, 182, 0.2); }
+        .glass-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px 0 rgba(155, 89, 182, 0.2); }
+        
+        .feature-card {
+            background: rgba(10, 15, 36, 0.6);
+            border: 1px solid rgba(0, 230, 230, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            height: 100%;
+        }
+        
         .image-container {
-            border: 3px solid rgba(155, 89, 182, 0.5);
+            border: 2px solid rgba(155, 89, 182, 0.4);
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 0 35px rgba(155, 89, 182, 0.3);
             background-color: rgba(0,0,0,0.5);
         }
-        .btn-hotmart {
-            background: linear-gradient(135deg, #ff9933 0%, #ff6600 100%);
+        
+        /* Botón CTA Principal rediseñado para mayor conversión */
+        .btn-cta-main {
+            background: linear-gradient(135deg, #ff0066 0%, #cc0052 100%);
             border: none;
             color: white;
-            padding: 18px 35px;
-            font-size: 1.3rem;
-            font-weight: bold;
+            padding: 20px 40px;
+            font-size: 1.4rem;
+            font-weight: 800;
             border-radius: 50px;
             text-transform: uppercase;
-            box-shadow: 0 5px 20px rgba(255, 102, 0, 0.5);
-            transition: transform 0.2s ease;
+            box-shadow: 0 10px 25px rgba(255, 0, 102, 0.5);
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            width: 100%;
+            max-width: 500px;
         }
-        .btn-hotmart:hover { transform: scale(1.05); color: white; background: linear-gradient(135deg, #ffaa44 0%, #ff7711 100%); }
+        .btn-cta-main:hover { 
+            transform: scale(1.05) translateY(-3px); 
+            color: white; 
+            box-shadow: 0 15px 35px rgba(255, 0, 102, 0.7); 
+        }
+        .btn-cta-main i { margin-right: 10px; }
+        
         .btn-whatsapp {
-            background-color: transparent;
-            border: 2px solid #e91e63;
+            background-color: rgba(37, 211, 102, 0.1);
+            border: 2px solid #25D366;
             color: white;
-            padding: 12px 25px;
+            padding: 12px 30px;
             border-radius: 50px;
             font-weight: bold;
-            margin-top: 20px;
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
         }
-        .btn-whatsapp:hover { background-color: #e91e63; color: white; transform: translateY(-3px); }
+        .btn-whatsapp:hover { background-color: #25D366; color: white; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);}
+        
+        .strike-price { text-decoration: line-through; color: #888; font-size: 1.2rem; }
+        .guarantee-badge { color: #ffcc00; font-size: 3rem; margin-bottom: 15px; }
+        .testimonial-stars { color: #ffcc00; margin-bottom: 15px; }
     </style>
 </head>
 <body>
 
 <div class="container py-5">
-    <div class="text-center mb-5">
-        <h1 class="display-3 text-neon-violet mb-3">RETO IA 21 DÍAS</h1>
-        <p class="lead fs-4">Domina la Inteligencia Artificial y construye tu negocio digital en tiempo récord.</p>
+    <div class="text-center mb-5 mt-3">
+        <h1 class="display-3 text-neon-violet mb-3 fw-bold">RETO IA 21 DÍAS</h1>
+        <p class="lead fs-3 fw-light">Domina la Inteligencia Artificial y construye tu negocio digital en tiempo récord.</p>
     </div>
 
-   <!-- SECCIÓN DE IMAGEN PROFESIONAL (ESTABLE Y PERMANENTE) -->
     <div class="row justify-content-center mb-5">
-        <div class="col-md-10 image-container p-0" style="border: 2px solid rgba(155, 89, 182, 0.4); border-radius: 20px; overflow: hidden; box-shadow: 0 0 35px rgba(155, 89, 182, 0.3);">
-            <img src="hero.png" 
-                 alt="Inteligencia Artificial Avanzada" class="img-fluid" style="width: 100%; height: auto; display: block;">
-        </div>
-    </div>
-    <div class="text-center mb-4">
-        <h2 class="fw-bold fs-1">🎁 TUS BONOS EXCLUSIVOS <span class="text-neon-pink">(VALOR $334 USD)</span></h2>
-        <p class="fs-5">Solo si compras a través de esta página hoy mismo.</p>
-    </div>
-
-    <div class="row g-4 mb-5">
-        <div class="col-md-4">
-            <div class="glass-card text-center">
-                <i class="fas fa-cloud text-neon-violet fa-4x mb-4"></i>
-                <h4 class="fw-bold fs-3">Media CloudPro 2.0</h4>
-                <p>Acceso premium al software de gestión de activos impulsado por IA.</p>
-                <p class="text-neon-pink fs-5">VALOR: $39.90 USD</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="glass-card text-center">
-                <i class="fas fa-rocket text-neon-violet fa-4x mb-4"></i>
-                <h4 class="fw-bold fs-3">Portal & 5 Apps</h4>
-                <p>Crea tu infraestructura digital en 14 días con video-clases y Grupo VIP.</p>
-                <p class="text-neon-pink fs-5">VALOR: $197 USD</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="glass-card text-center">
-                <i class="fas fa-brain text-neon-violet fa-4x mb-4"></i>
-                <h4 class="fw-bold fs-3">AI Profit Blueprint</h4>
-                <p>500+ Prompts expertos para automatizar y escalar tus ventas.</p>
-                <p class="text-neon-pink fs-5">VALOR: $97 USD</p>
-            </div>
+        <div class="col-lg-8 col-md-10 image-container p-0">
+            <img src="hero.png" alt="Inteligencia Artificial Avanzada" class="img-fluid" style="width: 100%; height: auto; display: block;">
         </div>
     </div>
 
-    <div class="text-center glass-card py-5">
-        <h3 class="display-5 mb-4 fw-bold">¿Listo para transformar tu futuro con IA?</h3>
-        
-        <a href="https://hotm.io/zy6Uh6iX" class="btn btn-hotmart d-inline-block text-decoration-none">
-            ¡QUIERO EL RETO + MIS BONOS GRATIS!
+    <div class="text-center mb-5 pb-4 border-bottom border-secondary">
+        <a href="https://pay.hotmart.com/W104507033Y?checkoutMode=10&bid=1777914418186" class="btn-cta-main">
+            <i class="fas fa-lock"></i> QUIERO MI ACCESO AHORA
         </a>
+        <p class="mt-3 text-muted small"><i class="fas fa-shield-alt"></i> Pago 100% seguro vía Hotmart • Acceso inmediato</p>
+    </div>
 
-        <div class="mt-5">
-            <p class="fs-5 mb-2">⚠️ IMPORTANTE: Para reclamar tus bonos:</p>
-            <p>Tras la compra, haz clic abajo para enviarme tu comprobante por WhatsApp.</p>
-            <p class="text-neon-violet small">Verificaremos tu compra y activaremos tus bonos de inmediato.</p>
-            
-            <a href="https://wa.link/vj2rrh" class="btn btn-whatsapp text-decoration-none">
-                <i class="fab fa-whatsapp me-2"></i> ENVIAR COMPROBANTE POR WHATSAPP
-            </a>
+    <div class="mb-5 pt-4">
+        <div class="text-center mb-5">
+            <span class="section-subtitle">// LO QUE INCLUYE</span>
+            <h2 class="display-5 fw-bold">Todo lo que obtienes por <span class="text-neon-pink">$27 USD</span></h2>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card text-center">
+                    <i class="fas fa-film text-neon-cyan fa-3x mb-3"></i>
+                    <h4 class="fw-bold fs-5">21 Lecciones en Video</h4>
+                    <p class="text-light opacity-75 small">25-35 minutos diarios, explicados en español claro, con ejemplos reales aplicables el mismo día.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card text-center">
+                    <i class="fas fa-tv text-neon-cyan fa-3x mb-3"></i>
+                    <h4 class="fw-bold fs-5">3 Sesiones en Vivo Grabadas</h4>
+                    <p class="text-light opacity-75 small">Las sesiones de coaching donde resolvemos casos reales, con acceso permanente para verlas cuando quieras.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card text-center">
+                    <i class="fas fa-layer-group text-neon-cyan fa-3x mb-3"></i>
+                    <h4 class="fw-bold fs-5">Biblioteca de Recursos</h4>
+                    <p class="text-light opacity-75 small">100+ prompts listos para usar, guías PDF semanales, plantillas descargables y checklists de configuración.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card text-center">
+                    <i class="fas fa-trophy text-neon-cyan fa-3x mb-3"></i>
+                    <h4 class="fw-bold fs-5">Certificado de Finalización</h4>
+                    <p class="text-light opacity-75 small">Certificado oficial con sello al completar el reto. Demostrable en LinkedIn y ante empleadores o clientes.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card text-center">
+                    <i class="fas fa-unlock-alt text-neon-cyan fa-3x mb-3"></i>
+                    <h4 class="fw-bold fs-5">Acceso de Por Vida</h4>
+                    <p class="text-light opacity-75 small">Entra al contenido cuando quieras, las veces que quieras. Sin fechas límite ni suscripciones adicionales.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card text-center">
+                    <i class="fas fa-tools text-neon-cyan fa-3x mb-3"></i>
+                    <h4 class="fw-bold fs-5">Herramientas 100% Gratuitas</h4>
+                    <p class="text-light opacity-75 small">Todo el reto usa versiones gratuitas permanentes. Sin tarjeta de crédito, sin sorpresas.</p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<footer class="text-center py-5 text-secondary">
-    <p>© 2026 Portal HotApp - Todos los derechos reservados para topografiadc9-hue.</p>
-</footer>
+    <div class="glass-card mb-5">
+        <div class="text-center mb-5">
+            <span class="section-subtitle">// TU INSTRUCTOR</span>
+            <h2 class="fw-bold">Aprende con quien <span class="text-neon-cyan">ya lo hizo</span></h2>
+        </div>
+        
+        <div class="row align-items-center mb-5 pb-5 border-bottom border-secondary">
+            <div class="col-md-4 text-center mb-4 mb-md-0">
+                <div class="rounded-circle d-inline-flex align-items-center justify-content-center border border-info border-3" style="width: 150px; height: 150px; background: #0f0c29; box-shadow: 0 0 20px rgba(0, 230, 230, 0.4);">
+                    <i class="fas fa-user-tie fa-4x text-neon-cyan"></i>
+                </div>
+                <h4 class="mt-3 fw-bold">Iván Mercado L.</h4>
+                <p class="text-neon-cyan small mb-0">// Instructor - Consultor IA</p>
+            </div>
+            <div class="col-md-8">
+                <p class="fs-6 opacity-75">Especialista en productividad con IA y entrenador de profesionales latinoamericanos que quieren usar la tecnología a su favor. Ha guiado a cientos de personas a implementar herramientas IA en su trabajo diario, sin necesidad de conocimientos técnicos previos. Su método: ejemplos reales, lenguaje claro, y acompañamiento hasta que funciona.</p>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                    <span class="badge rounded-pill bg-dark border border-info">+1250 alumnos formados</span>
+                    <span class="badge rounded-pill bg-dark border border-info">+8 países</span>
+                    <span class="badge rounded-pill bg-dark border border-info">PhD - Consultor IA+MKT</span>
+                </div>
+            </div>
+        </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+        <div class="text-center mb-4">
+            <span class="section-subtitle">// LO QUE DICEN LOS PARTICIPANTES</span>
+            <h2 class="fw-bold mb-4">Resultados de personas <span class="text-neon-cyan">reales</span></h2>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="rounded-circle bg-danger text-white d-flex align-items-center justify-content-center fw-bold me-3" style="width: 40px; height: 40px;">SR</div>
+                        <div>
+                            <h6 class="mb-0 fw-bold">Sofía R.</h6>
+                            <small class="text-neon-cyan" style="font-size: 0.7rem;">Abogada - La Paz, BO</small>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="small fst-italic opacity-75">"En la primera semana ya estaba usando ChatGPT para redactar mis escritos. Lo que me tomaba 2 horas ahora lo hago en 20 minutos. Increíble."</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="rounded-circle bg-info text-dark d-flex align-items-center justify-content-center fw-bold me-3" style="width: 40px; height: 40px;">CM</div>
+                        <div>
+                            <h6 class="mb-0 fw-bold">Carlos M.</h6>
+                            <small class="text-neon-cyan" style="font-size: 0.7rem;">Marketing Digital - Santa Cruz, BO</small>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="small fst-italic opacity-75">"Pensé que era muy complicado para mí. Pero Iván explica todo tan claro que al día 3 ya estaba creando imágenes con IA para mis clientes."</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="rounded-circle bg-purple
